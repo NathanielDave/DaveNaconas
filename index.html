@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel Dave Naconas</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Cosmic Theme Background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, rgba(0, 10, 30, 0.8), rgba(0, 10, 50, 0.8)), url('space-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF6347;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(255, 99, 71, 0.7);
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FF6347;
+            transform: scale(1.1);
+        }
+
+        /* Main Section */
+        main {
+            margin-top: 100px;
+            padding: 50px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px;
+        }
+
+        /* About Me Section */
+        .about-me {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
+        }
+
+        .about-me img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #FF6347;
+            margin-bottom: 20px;
+        }
+
+        .about-me h2 {
+            font-size: 2rem;
+            color: #FF6347;
+            margin-bottom: 20px;
+        }
+
+        .about-me p {
+            text-align: center;
+            color: #ddd;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills ul {
+            list-style-type: none;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
+        }
+
+        .skills ul li {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .skills ul li:hover {
+            color: #FF6347;
+        }
+
+        /* Hobbies Section */
+        .hobbies ul {
+            list-style-type: none;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
+        }
+
+        .hobbies ul li {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .hobbies ul li:hover {
+            color: #FF6347;
+        }
+
+        /* Contact Section */
+        .contact a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #FF6347;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact a:hover {
+            background: #fff;
+            color: #FF6347;
+            transform: scale(1.05);
+        }
+
+        /* Footer Section */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: #bbb;
+            font-size: 1rem;
+        }
+
+        /* Animation for Cosmic Text */
+        @keyframes cosmic-text {
+            0% { transform: translateX(100%); opacity: 0; }
+            50% { transform: translateX(0); opacity: 1; }
+            100% { transform: translateX(-100%); opacity: 0; }
+        }
+
+        .cosmic-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF6347;
+            text-transform: uppercase;
+            animation: cosmic-text 8s linear infinite;
+            letter-spacing: 4px;
+            white-space: nowrap;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                margin-top: 80px;
+            }
+
+            .about-me img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Nathaniel Dave Naconas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-me">
+            <img src="profile-photo.jpg" alt="Nathaniel's Photo">
+            <h2>About Me</h2>
+            <p>
+                Hello, I'm Nathaniel! A first-year BSIT student and a technology enthusiast. I'm passionate about learning new programming languages, creating designs, and solving real-world problems. I'm still a rookie, but my journey has just begun, and I'm excited about what lies ahead.
+            </p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Basic Programming (Java, HTML, CSS)</li>
+                <li>Web Development (React, Node.js)</li>
+                <li>Database Management</li>
+                <li>Graphic Design (Photoshop, Illustrator)</li>
+                <li>Problem Solving & Troubleshooting</li>
+            </ul>
+        </section>
+
+        <section id="hobbies" class="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Gaming (PC & Console)</li>
+                <li>Watching Anime</li>
+                <li>Photography</li>
+                <li>Listening to Music</li>
+                <li>Playing Guitar</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <a href="mailto:naconas_nathaniel@fbc.ph.education">Email Me</a>
+        </section>
+
+        <section>
+            <div class="cosmic-text">
+                My Journey to the Stars Has Just Begun!
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Nathaniel Dave Naconas. All rights reserved.</p>
+    </footer>
+</body>
+</html>
